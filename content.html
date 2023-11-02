@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Content</title>
+        <link rel="stylesheet" href="content.css">
+    </head>
+
+    <body>
+        <main>
+            <figure>
+                <img src="./images/profile-pic (2).png">
+                <figcaption>CLYDE THE COUGAR</figcaption>
+            </figure>
+            <p class="subtitle">The College of Charleston</p>
+
+            <div class="content">
+                <section class="distort">
+                    <div>
+                        <img src="./img/class on cistern.jpg" alt="">
+                        <h1>Cistern Yard</h1>
+                        <p>Cistern Yard is the heart of the College of Charleston campus, serving as a green space for generations of students and as a venue for convocation, spring commencement, concerts and other events. 
+                        <br><br>
+                        Shaded by giant live oaks and enclosed by iron fencing, this large Cistern Yard is bordered by Randolph Hall to the north, Porter's Lodge and George Street to the south, Towell Library and College Way to the west and St. Philip Street to the east. 
+                        <br><br>
+                        The land occupied by Cistern Yard is part of a 10-acre parcel that was the site of a military barracks prior to the American Revolution. The land was transferred to the College’s trustees by the South Carolina General Assembly in 1785.
+                        </p>
+                    </div>
+        
+                    <div>
+                        <img src="./img/05.jpg" alt="">
+                        <h1>Cougar Mall</h1>
+                        <p>On the Prowl, a statue of Clyde the Cougar guarding Cougar Mall, was a gift from the Class of 1996 and sculpted by Professor of Studio Art John Michel.
+                        <br><br>
+                        College of Charleston students voted to change the school mascot from the Maroons to the Cougars in 1970, in honor of a cougar that had recently arrived at the Charles Towne Landing zoo. 
+                        </p>
+                    </div>
+        
+                    <div>
+                        <img src="./img/08.jpg" alt="">
+                        <h1>Addlestone Library</h1>
+                        <p>Located at the southwest corner of Calhoun and Coming streets, The Marlene and Nathan Addlestone Library is the College of Charleston's fourth library and third library building.  
+                        <br><br>
+                        Nathan Addlestone, who died in 1999, donated generously to the construction of the building. The son of Jewish immigrants, he became a successful international businessman in the metals and scrap metal field; his wife, Marlene Addlestone-Bursten, is a 1964 alumna of the College and served on the library's steering committee.
+                        <br><br>
+                        Tucked in a small garden at the southeast corner of the building, between the terrace and a fence along Coming Street, is a memorial paying tribute to librarian Cynthia Graham Hurd, who was one of the victims of the tragic Mother Emanuel shooting on June 17, 2015.
+                        </p>
+                    </div>
+                </section>
+            </div>
+            <script>
+                const content = document.querySelector('section')
+                let currentPos = window.pageYOffset;
+        
+                const callDistort = function() {
+                    const newPos = window.pageYOffset;
+                    const diff = newPos - currentPos;
+                    const speed = diff * 0.35;
+        
+                    content.style.transform = "skewY(" + speed + "deg)";
+                    currentPos = newPos;
+                    requestAnimationFrame(callDistort);
+                };
+                callDistort();
+            </script>
+
+        </main>
+
+        <footer>
+
+        </footer>
+    
+    </body>
+
+
+</html>
